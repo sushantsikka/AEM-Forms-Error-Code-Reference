@@ -40,14 +40,16 @@ while i<=10150:
             and sheet_ranges['A'+str(i)].value != "Action" \
             and sheet_ranges['A'+str(i)].value != "Code":
 
-        htmlfile.write('<h2>') # We print the heading with tag h2
+        htmlfile.write('<h3>') # We print the heading with tag h2
         htmlfile.write(sheet_ranges['A'+str(i)].value)
-        htmlfile.write('</h2>')
+        htmlfile.write('</h3>')
         htmlfile.write('\n')
         i = i + 1
     else:
         htmlfile.write('<table>') #Creating table
         htmlfile.write('\n')
+        htmlfile.write('<col width="130">')
+        htmlfile.write('<col width="750">')
         htmlfile.write('<tr>') # Each row contains 2 cells
         htmlfile.write('\n')
         htmlfile.write('<td>')
@@ -167,13 +169,16 @@ while i <= 1753:
             and sheet_ranges['A' + str(i)].value != "Action" \
             and sheet_ranges['A' + str(i)].value != "Code":
         # Checking for headings in the Excel file
-        htmlfile.write('<h2>') # We print the heading with tag h2
+        htmlfile.write('<h3>') # We print the heading with tag h2
         htmlfile.write(sheet_ranges['A' + str(i)].value)
-        htmlfile.write('</h2>')
+        htmlfile.write('</h3>')
         htmlfile.write('\n')
         i = i + 1
     else:
         htmlfile.write('<table>')  # Creating table
+        htmlfile.write('\n')
+        htmlfile.write('<col width="130">')
+        htmlfile.write('<col width="750">')
         htmlfile.write('\n')
         htmlfile.write('<tr>')
         htmlfile.write('\n')
